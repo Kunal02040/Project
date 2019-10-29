@@ -1,0 +1,25 @@
+---
+title: "Popular places in bangalore, India "
+author: "Rishi Banerjee"
+date: "9/10/2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r, echo=FALSE}
+# Popular places in bangalore
+library(knitr)
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lat=12.969256,lng=77.594132, popup="Kanteerava stadium") %>%
+  addMarkers(lat=12.971669,lng=77.596348, popup="UB city") %>%
+  addMarkers(lat=12.975696,lng=77.593171, popup="Cubbon park") %>%
+  addMarkers(lat=12.9758668,lng=77.5966972, popup="VTU museum") %>%
+  addMarkers(lat=12.9804878,lng=77.5907749, popup="Vidhana soudha") %>%
+  addMarkers(lat=12.9919877,lng=77.5885862, popup="Mount carmel college") #%>%
+  #setView (lat=12.954517, lng=77.3507385, zoom=16) 
+  
+m
+```
